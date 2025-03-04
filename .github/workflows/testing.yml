@@ -1,0 +1,33 @@
+name: Unit tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_call:
+    inputs:
+      should-release:
+        description: 'Indicates if this is part of a release process'
+        type: boolean
+        default: false
+
+jobs:
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+          cache: false
+      - name: Run tests
+        run: go test ./... -v
+      - name: Checking test results
+        if: failure() && inputs.should-release
+        run: |
+          echo "Tests failed. Cancelling release process."
+          exit 1

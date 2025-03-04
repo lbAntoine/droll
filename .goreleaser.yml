@@ -1,0 +1,11 @@
+builds:
+  - id: "droll"
+    main: ./
+    binary: droll
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
