@@ -184,7 +184,7 @@ func TestDisplayResults(t *testing.T) {
 		},
 		{
 			name:    "Double roll, only throws",
-			results: []int{19, 12},
+			results: []int{19, 13},
 			setupGlobalVars: func() {
 				diceNumber = 2
 				diceType = 20
