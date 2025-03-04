@@ -1,7 +1,7 @@
 # dRoll - CLI Dice Roller
 
 ![Go Version](https://img.shields.io/badge/Go-1.23-blue)
-![Build Status](https://img.shields.io/github/actions/workflow/status/lbAntoine/droll/tests.yml)
+![Build Status](https://img.shields.io/github/actions/workflow/status/lbAntoine/droll/release.yml)
 ![License](https://img.shields.io/github/license/lbAntoine/droll)
 
 ## 🎲 About dRoll
