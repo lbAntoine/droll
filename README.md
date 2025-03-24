@@ -48,39 +48,56 @@ Download the latest release for your platform from the [Releases](https://github
 
 ## 🎯 Usage Examples
 
-### Basic Rolling
+### Dice Rolling
 
 ```bash
 # Roll a single six-sided die
-droll 6
+droll roll 6
 
 # Roll 3 six-sided dice
-droll 3 6
+droll roll 3 6
 
 # Roll a 20-sided die
-droll 20
+droll roll 20
 ```
 
-### Advanced Options
+#### Advanced Options
 
 ```bash
 # Roll 2 d20 and show the sum
-droll -n 2 -d 20 --sum
+droll roll -n 2 -d 20 --sum
 
 # Roll 4 d6 and show individual throws
-droll -n 4 -d 6 --unit
+droll roll -n 4 -d 6 --unit
 
 # Roll with comment flag for D&D-style messages
-droll -n 1 -d 20 -c
+droll roll -n 1 -d 20 -v
 ```
 
-### Flags
+#### Flags
 
 - `-n, --number`: Number of dice to roll
 - `-d, --dice`: Type of dice to roll
 - `--sum`: Only show the total sum
 - `--unit`: Show individual dice throws
-- `-c, --comment`: Enable D&D-style roll messages
+- `-v, --verbose`: Enable D&D-style roll messages
+
+### Coin Flipping
+
+```bash
+# Flip a single coin
+droll flip
+
+# Flip 3 coins
+droll flip 3
+
+# Flip 3 coin and get summary
+droll flip 4 -v
+```
+
+#### Flags
+
+- `-v`, `--verbose`: Append a summary of the flips to the output.
 
 ## 🤝 Contributing
 
