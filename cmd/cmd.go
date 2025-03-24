@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/lbAntoine/droll/internal/commands"
 	"github.com/spf13/cobra"
 )
 
@@ -170,6 +171,8 @@ func printVerboseMessage(results []int) {
 }
 
 func init() {
+	rootCmd.AddCommand(commands.NewFlipCommand())
+
 	rootCmd.Flags().IntVarP(&diceNumber, "number", "n", 0, "Number of dice to roll")
 	rootCmd.Flags().IntVarP(&diceType, "dice", "d", 0, "Type of dice to roll (e.g., 6 for d6)")
 	rootCmd.Flags().BoolVar(&showSum, "sum", false, "Only show the sum of dice")
