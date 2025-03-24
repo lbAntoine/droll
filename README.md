@@ -71,7 +71,7 @@ droll roll -n 2 -d 20 --sum
 droll roll -n 4 -d 6 --unit
 
 # Roll with comment flag for D&D-style messages
-droll roll -n 1 -d 20 -c
+droll roll -n 1 -d 20 -v
 ```
 
 #### Flags
@@ -80,7 +80,7 @@ droll roll -n 1 -d 20 -c
 - `-d, --dice`: Type of dice to roll
 - `--sum`: Only show the total sum
 - `--unit`: Show individual dice throws
-- `-c, --comment`: Enable D&D-style roll messages
+- `-v, --verbose`: Enable D&D-style roll messages
 
 ### Coin Flipping
 
@@ -90,7 +90,14 @@ droll flip
 
 # Flip 3 coins
 droll flip 3
+
+# Flip 3 coin and get summary
+droll flip 4 -v
 ```
+
+#### Flags
+
+- `-v`, `--verbose`: Append a summary of the flips to the output.
 
 ## 🤝 Contributing
 

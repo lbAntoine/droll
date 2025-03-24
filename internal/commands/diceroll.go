@@ -10,14 +10,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	diceNumber int
-	diceType   int
-	showSum    bool
-	showUnit   bool
-	verbose    bool
-)
-
 func NewRollCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "roll [number] [dice_type]",
@@ -31,7 +23,7 @@ func NewRollCommand() *cobra.Command {
 	cmd.Flags().IntVarP(&diceType, "dice", "d", 0, "Type of dice to roll (e.g., 6 for d6)")
 	cmd.Flags().BoolVar(&showSum, "sum", false, "Only show the sum of dice")
 	cmd.Flags().BoolVar(&showUnit, "unit", false, "Only show individual dice throws")
-	cmd.Flags().BoolVarP(&verbose, "comment", "c", false, "Show verbose DnD-style messages")
+	cmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "Show verbose DnD-style messages")
 
 	return cmd
 }
