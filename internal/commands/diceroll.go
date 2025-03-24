@@ -20,7 +20,7 @@ var (
 
 func NewRollCommand() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "roll [--number, -n dice_number] --dice, -d dice_type [options]",
+		Use:   "roll [number] [dice_type]",
 		Short: "Roll dice with specified dices",
 		Run: func(cmd *cobra.Command, args []string) {
 			processCmd(args)
