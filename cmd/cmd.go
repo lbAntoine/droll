@@ -27,6 +27,7 @@ var rootCmd = &cobra.Command{
 	Long: `A Fast and Easy to use CLI dice roller built
 with love and passion by lbAntoine in Go.
 Complete documentation is available at https://github.com/lbAntoine/droll`,
+	Version: "0.1.1",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
 			cmd.Help()
@@ -173,7 +174,7 @@ func init() {
 	rootCmd.Flags().IntVarP(&diceType, "dice", "d", 0, "Type of dice to roll (e.g., 6 for d6)")
 	rootCmd.Flags().BoolVar(&showSum, "sum", false, "Only show the sum of dice")
 	rootCmd.Flags().BoolVar(&showUnit, "unit", false, "Only show individual dice throws")
-	rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "Show verbose DnD-style messages")
+	rootCmd.Flags().BoolVarP(&verbose, "comment", "c", false, "Show verbose DnD-style messages")
 }
 
 func Execute() {
