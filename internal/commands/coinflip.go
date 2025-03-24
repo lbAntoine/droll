@@ -49,6 +49,6 @@ func flipCoin(numFlips int) []string {
 func displayFlipResults(results []string) {
 	fmt.Printf("%d coin flips:\n", len(results))
 	for i, res := range results {
-		fmt.Printf("Flip %d: %s\n", i+1, res)
+		fmt.Printf("  - Flip %d: %s\n", i+1, res)
 	}
 }
