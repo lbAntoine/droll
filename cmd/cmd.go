@@ -23,7 +23,7 @@ var rootCmd = &cobra.Command{
   droll dice_number dice_type [options]
   droll dice_type [options]
   droll --help, -h`,
-	Short: "dRoll is a CLI dice roller",
+	Short: "dRoll is a CLI dice roller: v0.1.1",
 	Long: `A Fast and Easy to use CLI dice roller built
 with love and passion by lbAntoine in Go.
 Complete documentation is available at https://github.com/lbAntoine/droll`,
