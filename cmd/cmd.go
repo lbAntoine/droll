@@ -170,14 +170,6 @@ func printVerboseMessage(results []int) {
 }
 
 func init() {
-	rootCmd.AddCommand(&cobra.Command{
-		Use:   "version",
-		Short: "Display the version of dRoll",
-		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Printf("dRoll version: v%s\n", rootCmd.Version)
-		},
-	})
-
 	rootCmd.Flags().IntVarP(&diceNumber, "number", "n", 0, "Number of dice to roll")
 	rootCmd.Flags().IntVarP(&diceType, "dice", "d", 0, "Type of dice to roll (e.g., 6 for d6)")
 	rootCmd.Flags().BoolVar(&showSum, "sum", false, "Only show the sum of dice")
