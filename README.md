@@ -70,8 +70,8 @@ droll -n 2 -d 20 --sum
 # Roll 4 d6 and show individual throws
 droll -n 4 -d 6 --unit
 
-# Roll with verbose D&D-style messages
-droll -n 1 -d 20 -v
+# Roll with comment flag for D&D-style messages
+droll -n 1 -d 20 -c
 ```
 
 ### Flags
@@ -80,7 +80,7 @@ droll -n 1 -d 20 -v
 - `-d, --dice`: Type of dice to roll
 - `--sum`: Only show the total sum
 - `--unit`: Show individual dice throws
-- `-v, --verbose`: Enable D&D-style roll messages
+- `-c, --comment`: Enable D&D-style roll messages
 
 ## 🤝 Contributing
 
